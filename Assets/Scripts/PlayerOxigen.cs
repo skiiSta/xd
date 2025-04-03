@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerOxigen : MonoBehaviour
+public class PlayerOxygen : MonoBehaviour
 {
     // Variables de oxígeno
     public float maxOxygen = 100f;
@@ -10,16 +10,24 @@ public class PlayerOxigen : MonoBehaviour
 
     private bool isInteractingWithOxygenSource = false;  // Flag para saber si el jugador está interactuando con una fuente de oxígeno
 
-    // Referencia al PlayerHealth (ya que lo tenemos en otro script)
+    // Referencias a PlayerHealth y UIManager
     private PlayerHealth playerHealth;
+    private UIManager uiManager;
 
     private void Start()
     {
         // Inicialización de oxígeno
         currentOxygen = maxOxygen;
 
-        // Obtenemos la referencia al PlayerHealth
+        // Obtenemos la referencia al PlayerHealth y UIManager
         playerHealth = GetComponent<PlayerHealth>();
+        uiManager = FindObjectOfType<UIManager>();
+        
+        // Actualizamos la barra de oxígeno al iniciar
+        if (uiManager != null)
+        {
+            uiManager.SetOxygen(currentOxygen);
+        }
     }
 
     private void Update()
@@ -43,6 +51,15 @@ public class PlayerOxigen : MonoBehaviour
 
         // Aseguramos que el oxígeno no exceda los límites
         currentOxygen = Mathf.Clamp(currentOxygen, 0, maxOxygen);
+
+        // Actualizamos la barra de oxígeno en la UI
+        if (uiManager != null)
+        {
+            uiManager.SetOxygen(currentOxygen);
+        }
+
+        // Debug para verificar el oxígeno
+        Debug.Log("Oxygen: " + currentOxygen);
     }
 
     // Disminuir el oxígeno con el tiempo

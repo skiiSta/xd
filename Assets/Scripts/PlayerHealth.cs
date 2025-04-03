@@ -6,10 +6,21 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth;
     public bool isDead;
 
+    private UIManager uiManager;
+
     private void Start()
     {
         currentHealth = maxHealth;
         isDead = false;
+
+        // Obtener la referencia al UIManager
+        uiManager = FindObjectOfType<UIManager>();
+        
+        // Actualizamos la barra de vida al iniciar
+        if (uiManager != null)
+        {
+            uiManager.SetVida(currentHealth); // Asegúrate de que esto actualiza la UI
+        }
     }
 
     private void Update()
@@ -27,6 +38,16 @@ public class PlayerHealth : MonoBehaviour
         if (isDead) return;
 
         currentHealth -= damage;
+
+        // Asegurarnos que la salud no pase de 0
+        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
+
+        // Actualizamos la barra de vida en la UI
+        if (uiManager != null)
+        {
+            uiManager.SetVida(currentHealth); // Actualiza la barra de vida
+        }
+
         Debug.Log("Health: " + currentHealth);
     }
 

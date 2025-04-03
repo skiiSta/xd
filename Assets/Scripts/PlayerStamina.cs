@@ -11,10 +11,14 @@ public class PlayerStamina : MonoBehaviour
     private float cooldownTime = 2f;  // Tiempo de cooldown cuando la stamina llega a 0
     private float cooldownTimer = 0f;  // Temporizador para el cooldown
     private bool isOnCooldown = false;  // Flag para saber si está en cooldown
+    private UIManager uiManager;
 
     private void Start()
     {
         currentStamina = maxStamina;
+
+        // Obtener referencia al UIManager para actualizar la barra de stamina
+        uiManager = FindObjectOfType<UIManager>();
     }
 
     private void Update()
@@ -54,6 +58,12 @@ public class PlayerStamina : MonoBehaviour
         if (currentStamina <= 0f && !isOnCooldown)
         {
             EnterCooldown();
+        }
+
+        // Actualizar la barra de stamina en la UI
+        if (uiManager != null)
+        {
+            uiManager.SetStamina(currentStamina);
         }
     }
 

@@ -19,6 +19,16 @@
       "source": "builtin",
       "testable": false
     },
+    "com.unity.ugui@2.0.0": {
+      "name": "com.unity.ugui",
+      "displayName": "Unity UI",
+      "resolvedPath": "C:\\Users\\Jesus\\Prueba3d\\Library\\PackageCache\\com.unity.ugui@c82f62fefab3",
+      "fingerprint": "c82f62fefab33ce05e397f56634776192888900b",
+      "editorCompatibility": "2019.2.0a1",
+      "version": "2.0.0",
+      "source": "builtin",
+      "testable": false
+    },
     "com.unity.modules.accessibility@1.0.0": {
       "name": "com.unity.modules.accessibility",
       "displayName": "Accessibility",

@@ -10,11 +10,11 @@ public class OxygenSource : MonoBehaviour
         // Comprobamos si el objeto que colisiona es el jugador
         if (collision.gameObject.CompareTag(playerTag))
         {
-            // Obtén el componente PlayerOxigen del jugador y recarga el oxígeno
-            PlayerOxigen playerOxigen = collision.gameObject.GetComponent<PlayerOxigen>();
-            if (playerOxigen != null)
+            // Obtén el componente PlayerOxygen del jugador y recarga el oxígeno
+            PlayerOxygen playerOxygen = collision.gameObject.GetComponent<PlayerOxygen>();
+            if (playerOxygen != null)
             {
-                playerOxigen.InteractWithOxygenSource();
+                playerOxygen.InteractWithOxygenSource();
                 Debug.Log("Oxígeno recargado al máximo.");
             }
         }
@@ -25,10 +25,10 @@ public class OxygenSource : MonoBehaviour
         // Finalizamos la interacción cuando el jugador deja de estar en contacto con el objeto
         if (collision.gameObject.CompareTag(playerTag))
         {
-            PlayerOxigen playerOxigen = collision.gameObject.GetComponent<PlayerOxigen>();
-            if (playerOxigen != null)
+            PlayerOxygen playerOxygen = collision.gameObject.GetComponent<PlayerOxygen>();
+            if (playerOxygen != null)
             {
-                playerOxigen.StopInteractingWithOxygenSource();
+                playerOxygen.StopInteractingWithOxygenSource();
                 Debug.Log("Dejaste de interactuar con la fuente de oxígeno.");
             }
         }
