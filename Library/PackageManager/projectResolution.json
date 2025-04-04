@@ -1,18 +1,18 @@
 {
   "context": {
-    "projectPath": "C:/Users/Jesus/Prueba3d/Packages",
+    "projectPath": "C:/Users/Jesus/xd/Packages",
     "unityVersion": "6000.0.43f1"
   },
   "inputs": [
-    "C:\\Users\\Jesus\\Prueba3d\\Packages\\manifest.json",
-    "C:\\Users\\Jesus\\Prueba3d\\Packages\\packages-lock.json",
+    "C:\\Users\\Jesus\\xd\\Packages\\manifest.json",
+    "C:\\Users\\Jesus\\xd\\Packages\\packages-lock.json",
     "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.43f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
     "com.unity.multiplayer.center@1.0.0": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
-      "resolvedPath": "C:\\Users\\Jesus\\Prueba3d\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
+      "resolvedPath": "C:\\Users\\Jesus\\xd\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
       "fingerprint": "f3fb577b3546594b97b8cc34307cd621f60f1c73",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.0",
@@ -22,7 +22,7 @@
     "com.unity.ugui@2.0.0": {
       "name": "com.unity.ugui",
       "displayName": "Unity UI",
-      "resolvedPath": "C:\\Users\\Jesus\\Prueba3d\\Library\\PackageCache\\com.unity.ugui@c82f62fefab3",
+      "resolvedPath": "C:\\Users\\Jesus\\xd\\Library\\PackageCache\\com.unity.ugui@c82f62fefab3",
       "fingerprint": "c82f62fefab33ce05e397f56634776192888900b",
       "editorCompatibility": "2019.2.0a1",
       "version": "2.0.0",

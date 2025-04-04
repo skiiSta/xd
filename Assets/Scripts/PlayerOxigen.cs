@@ -58,8 +58,8 @@ public class PlayerOxygen : MonoBehaviour
             uiManager.SetOxygen(currentOxygen);
         }
 
-        // Debug para verificar el oxígeno
-        Debug.Log("Oxygen: " + currentOxygen);
+            // Debug para verificar el oxígeno
+            // Debug.Log("Oxygen: " + currentOxygen);
     }
 
     // Disminuir el oxígeno con el tiempo
@@ -74,7 +74,7 @@ public class PlayerOxygen : MonoBehaviour
         if (playerHealth != null)
         {
             // Disminuimos la vida por la falta de oxígeno
-            playerHealth.DecreaseHealth(1f * Time.deltaTime);  // Ajusta la velocidad de la pérdida de salud según se necesite
+            playerHealth.DecreaseHealth(20f * Time.deltaTime);  // Ajusta la velocidad de la pérdida de salud según se necesite
         }
     }
 
